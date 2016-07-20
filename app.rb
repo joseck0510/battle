@@ -18,12 +18,14 @@ enable :sessions
   get '/play' do
     @player_1 = $player_1.name
     @player_2 = $player_2.name
+    @player_2_hp = $player_2.hit_points
     erb(:play)
   end
 
   get '/attack' do
     @player_1 = $player_1.name
     @player_2 = $player_2.name
+    @player_2_attacked = $player_2.attacked
     erb(:attack)
   end
 
