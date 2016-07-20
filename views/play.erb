@@ -1,9 +1,9 @@
 <link rel="stylesheet" type="text/css" href="<%= url("/style.css")%>">
 
 <div>
-  <h1>Player 1 is called <%= @player_1 %> and Player 2 is called <%= @player_2 %></h1>
+  <h1><%= @player_1.name %> vs. <%= @player_2.name %></h1>
 </div>
 <div>
-  <h2><%= @player_2 %> has <%= @player_2_hp %> HP</h2>
+  <h2><%= @player_2.name %> has <%= @player_2.hit_points %> HP</h2>
 </div>
 <h2><a href="/attack">Attack</a></h2>

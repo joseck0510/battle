@@ -18,7 +18,7 @@ subject(:bob) { Player.new( "Bob" ) }
 
   describe "#attack" do
     it "reduces the players hit_points by the default value" do
-      expect{ bob.attacked }.to change{bob.hit_points}.by(-Player::DEFAULT_ATTACK)
+      expect{ bob.receive_damage }.to change{bob.hit_points}.by(-Player::DEFAULT_ATTACK)
     end
   end
 
