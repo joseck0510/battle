@@ -1,4 +1,4 @@
-# require 'battle'
+require 'spec_helper'
 
 RSpec.feature "Enter Names", :type => :feature do
   scenario "Player 1 and Player 2 enter their names" do
