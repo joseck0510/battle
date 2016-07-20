@@ -8,7 +8,7 @@ RSpec.feature "Enter Names", :type => :feature do
     fill_in "player_2", :with => "Bub"
     click_button 'Enter Names'
 
-    expect(page).to have_text("Player is called Bob and Player 2 is called Bub")
+    expect(page).to have_text("Player 1 is called Bob and Player 2 is called Bub")
 
   end
 end
