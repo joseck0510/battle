@@ -3,7 +3,7 @@ require 'player'
 describe Player do
 
 subject(:bob) { Player.new( "Bob" ) }
-
+let(:attack_hit)  {Player::DEFAULT_HIT_POINTS}
   describe "#name" do
     it "returns the name" do
     expect(bob.name).to eq "Bob"
@@ -12,13 +12,7 @@ subject(:bob) { Player.new( "Bob" ) }
 
   describe "#hit_points" do
     it "starts with the default hit points" do
-      expect(bob.hit_points).to eq Player::DEFAULT_HIT_POINTS
-    end
-  end
-
-  describe "#attack" do
-    it "reduces the players hit_points by the default value" do
-      expect{ bob.receive_damage }.to change{bob.hit_points}.by(-Player::DEFAULT_ATTACK)
+      expect(bob.hit_points).to eq attack_hit
     end
   end
 
