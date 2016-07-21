@@ -28,9 +28,8 @@ enable :sessions
     erb(:attack)
   end
 
-  get '/switch_player' do
-    @game = $game
-    @game.switch_player
+  post '/switch_player' do
+    $game.switch_player
     redirect '/play'
   end
 

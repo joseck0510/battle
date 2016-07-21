@@ -4,6 +4,7 @@
   <h1><%= @game.player_1.name %> vs. <%= @game.player_2.name %></h1>
 </div>
 <div>
+  <h2><%= @game.player_1.name %> has <%= @game.player_1.hit_points %> HP</h2>
   <h2><%= @game.player_2.name %> has <%= @game.player_2.hit_points %> HP</h2>
 </div>
 <h2>Turn: <%= @game.current_player.name %> </h2>
