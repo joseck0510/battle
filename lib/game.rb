@@ -25,4 +25,13 @@ class Game
     #@players[0], @players[1] = @players[1], @players[0]
   end
 
+  # CLASS METHODS
+  def self.create(player_1, player_2)
+    @game = Game.new(player_1, player_2)
+  end
+
+  def self.instance
+    @game
+  end
+
 end
