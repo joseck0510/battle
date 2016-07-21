@@ -8,4 +8,10 @@
   <h2><%= @game.player_2.name %> has <%= @game.player_2.hit_points %> HP</h2>
 </div>
 <h2>Turn: <%= @game.current_player.name %> </h2>
+<div>
+<%if @game.player_1.hit_points <= 0 %>
+<h2><%= @game.player_1.name %> has lost the game!</h2>
+<% else %>
 <h2><a href="/attack">Attack</a></h2>
+<%end %>
+</div>

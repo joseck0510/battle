@@ -5,8 +5,7 @@ feature 'Switch turns' do
   end
   scenario 'After player 1 attacks, do the switch' do
     sign_in_and_play
-    click_link "Attack"
-    click_button "OK"
+    attack_and_confirm
     expect(page).not_to have_content "Turn: Bob"
     expect(page).to have_content "Turn: Bub"
   end
