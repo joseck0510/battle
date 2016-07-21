@@ -16,13 +16,15 @@ RSpec.feature "Attack Player", :type => :feature do
 
   scenario "Player 2 takes 10 hit points damage" do
     sign_in_and_play
-    click_link "Attack"
-    expect(page).to have_content "Bub takes 10 HP damage. He now has 50 HP"
+    allow(Kernel).to receive(:rand).and_return(10)
+    attack_and_confirm
+    expect(page).to have_content "Bub has 50 HP"
   end
   scenario "Player 1 takes 10 hit points damage" do
     sign_in_and_play
     attack_and_confirm
-    click_link "Attack"
-    expect(page).to have_content "Bob takes 10 HP damage. He now has 50 HP"
+    allow(Kernel).to receive(:rand).and_return(10)
+    attack_and_confirm
+    expect(page).to have_content "Bob has 50 HP"
   end
 end

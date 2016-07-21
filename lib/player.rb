@@ -11,7 +11,8 @@ attr_reader :name,:hit_points
   end
 
   def receive_damage
-    @hit_points -= DEFAULT_ATTACK
+    @hit_points -= Kernel.rand(1..10)
+    #@hit_points -= DEFAULT_ATTACK
   end
 
 end
