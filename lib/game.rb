@@ -12,8 +12,17 @@ class Game
     @players.last
   end
 
+  def current_player
+    player_1
+  end
+
   def attack(player)
     player.receive_damage
+  end
+
+  def switch_player
+    @players = @players.reverse
+    #@players[0], @players[1] = @players[1], @players[0]
   end
 
 end

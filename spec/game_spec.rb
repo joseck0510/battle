@@ -23,4 +23,17 @@ describe Game do
       game.attack(player_2)
     end
   end
+
+  describe "#current_player" do
+    it "should display current player" do
+      expect(game.current_player).to eq player_1
+    end
+  end
+
+  describe "#switch_player" do
+    it "should switch player after each attack" do
+      game.switch_player
+      expect(game.current_player).to eq player_2
+    end
+  end
 end
