@@ -23,4 +23,18 @@ describe Game do
       game.attack(name2)
     end
   end
+
+  describe '#current_player' do
+    it 'starts as name1' do
+      expect(game.current_player).to eq name1
+    end
+  end
+
+  describe '#switch_turns' do
+    it 'should switch the player after every attack' do
+      game.switch_turns
+      expect(game.current_player).to eq name2
+    end
+  end
+
 end
